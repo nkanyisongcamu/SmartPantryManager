@@ -1,0 +1,29 @@
+SMART PANTRY MANAGER – REQUIREMENTS CHECKLIST
+
+[ ] Java, not Kotlin
+[ ] Android Studio project opens and Gradle syncs
+[ ] SQLite database persists data
+[ ] Pantry Create works
+[ ] Pantry Read/list works
+[ ] Pantry Update works
+[ ] Pantry Delete works
+[ ] RecyclerView + custom PantryAdapter works
+[ ] Add/Edit validation works
+[ ] Suggested Recipes screen works
+[ ] At least 15-20 seeded recipes (this project contains 20)
+[ ] Strict matching excludes recipes with missing ingredients
+[ ] Singular/plural normalization is demonstrated
+[ ] Recipe Detail screen works
+[ ] Settings screen works
+[ ] Bottom navigation buttons work
+[ ] Empty suggestions message works
+[ ] Close/reopen app and verify pantry persists
+[ ] Create public GitHub repository
+[ ] Make at least 10 genuine incremental commits
+[ ] Add README.md
+[ ] Record 5-7 minute narrated video
+[ ] Capture actual screenshots of every screen/core function
+[ ] Write report with Harvard references
+[ ] Put project + video + report in one ZIP
+[ ] Keep final ZIP <= 50MB
+[ ] Rename final ZIP according to the assignment format

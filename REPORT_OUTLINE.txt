@@ -1,0 +1,111 @@
+MOBILE APP DEVELOPMENT 700
+SMART PANTRY MANAGER – WRITTEN REPORT OUTLINE
+
+1. COVER PAGE
+App name: Smart Pantry Manager
+Student name: [YOUR NAME]
+Student ITS number: [YOUR ITS NUMBER]
+Module: Mobile App Development 700
+Date: [DATE]
+
+2. TABLE OF CONTENTS
+Generate this automatically in Microsoft Word after applying Heading styles.
+
+3. INTRODUCTION
+Smart Pantry Manager is a Java Android application designed to reduce food waste by helping users track ingredients already available in their pantry. The application focuses on strict recipe matching: a recipe is suggested only when every required ingredient is available in the pantry. This removes the need for the user to buy an additional missing ingredient.
+
+4. SYSTEM DESIGN
+
+4.1 Screen flow
+Pantry List
+  -> Add/Edit Ingredient
+  -> Suggested Recipes
+      -> Recipe Detail
+  -> Settings
+
+Use your own screenshot/diagram of this flow in the final report.
+
+4.2 Database design
+Table: pantry_items
+- id: INTEGER, Primary Key, Auto Increment
+- name: TEXT, NOT NULL
+- quantity: REAL, NOT NULL
+- unit: TEXT, NOT NULL
+- expiry_date: TEXT, optional
+
+Table: recipes
+- id: INTEGER, Primary Key, Auto Increment
+- name: TEXT, NOT NULL
+- ingredients: TEXT, NOT NULL
+- method: TEXT, NOT NULL
+
+Explain that SQLiteOpenHelper creates the database and seeds 20 recipes during first database creation.
+
+5. SCREENSHOTS OF EVERY OUTPUT
+Insert REAL screenshots from your running application.
+
+5.1 Pantry list – empty state
+Caption: The pantry list displays the required feedback when no ingredients have been added.
+
+5.2 Add ingredient form
+Caption: The user enters ingredient name, quantity, unit and optional expiry date.
+
+5.3 Validation
+Caption: The form prevents saving when required data is missing or the quantity is invalid.
+
+5.4 Pantry list after adding data
+Caption: RecyclerView displays pantry records retrieved from SQLite.
+
+5.5 Edit ingredient
+Caption: Existing pantry data is loaded into the edit form and can be updated.
+
+5.6 Delete ingredient
+Caption: The user is asked to confirm deletion before the database record is removed.
+
+5.7 Suggested recipes
+Caption: Only recipes satisfying the strict-matching rule are displayed.
+
+5.8 Strict matching test
+Caption: Removing one required ingredient causes the affected recipe to disappear from the suggestions.
+
+5.9 Recipe detail
+Caption: The selected recipe displays its full ingredient list and preparation method.
+
+5.10 Settings
+Caption: The user can enable or disable expiring-soon alerts.
+
+5.11 Persistence
+Caption: Pantry data remains available after closing and reopening the application.
+
+6. KEY CODE SNIPPETS
+
+Snippet 1 – SQLite database creation
+Use the onCreate() method in DatabaseHelper.java and explain that it creates the pantry_items and recipes tables.
+
+Snippet 2 – CRUD insert/update/delete
+Use insertPantry(), updatePantry(), and deletePantry() and explain how the application implements CRUD.
+
+Snippet 3 – RecyclerView adapter
+Use PantryAdapter.java and explain how the custom adapter binds database records to the RecyclerView.
+
+Snippet 4 – Intents
+Use the navigation code in PantryActivity.java and explain how Intents open Add/Edit, Suggested Recipes and Settings screens.
+
+Snippet 5 – Strict matching algorithm
+Use canMakeRecipe() in DatabaseHelper.java and explain that every required ingredient is checked before a recipe is added to the suggestion list.
+
+7. CHALLENGES AND SOLUTIONS
+Write about 2-3 REAL problems you encountered. Do not invent them.
+Possible structure:
+Challenge: [What actually went wrong]
+Solution: [What you changed]
+Result: [How you confirmed it worked]
+
+8. CONCLUSION AND REFLECTION
+Explain what you learned about Android Activities, Intents, RecyclerView, SQLite persistence, CRUD operations and business logic. State realistic improvements you would make with more time, such as richer quantity-aware recipes, stronger date validation, notifications for expiry dates, better UI styling, and a more normalized recipe-ingredient database.
+
+9. REFERENCES
+Use Harvard style. Only include sources you actually consulted, such as official Android documentation, SQLite documentation, and course material. Replace this section with the exact sources and access dates you used.
+
+ACADEMIC INTEGRITY NOTE
+The assignment states that the submitted app must be your own work and that you must be able to explain and defend your code. Before submission, customize the implementation, understand every class and method, create your own GitHub history, and produce your own screenshots and narrated video.
