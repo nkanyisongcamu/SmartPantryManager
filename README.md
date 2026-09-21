@@ -36,3 +36,12 @@ Create a public GitHub repository and push this project from the beginning of de
 
 ## Important
 The assignment requires actual screenshots of the running application, a 5-7 minute narrated demonstration video, a public GitHub repository, and a written report. Those evidence items must be produced from your own running project and development process.
+
+## Project Features
+
+- Add ingredients to the pantry
+- Edit pantry ingredients
+- Delete pantry ingredients
+- View available ingredients
+- Manage pantry information
+- Android-based user interface
